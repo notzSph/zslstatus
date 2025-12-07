@@ -8,7 +8,7 @@
 #include <X11/Xlib.h>
 
 #include "arg.h"
-#include "slstatus.h"
+#include "zslstatus.h"
 #include "util.h"
 
 struct arg {
@@ -57,7 +57,7 @@ main(int argc, char *argv[])
 	sflag = 0;
 	ARGBEGIN {
 	case 'v':
-		die("slstatus-"VERSION);
+		die("zslstatus-"VERSION);
 	case '1':
 		done = 1;
 		/* FALLTHROUGH */

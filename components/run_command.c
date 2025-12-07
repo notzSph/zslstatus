@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 
-#include "../slstatus.h"
+#include "../zslstatus.h"
 #include "../util.h"
 
 const char *

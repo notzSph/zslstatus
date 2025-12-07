@@ -5,7 +5,7 @@
 #include <X11/XKBlib.h>
 #include <X11/Xlib.h>
 
-#include "../slstatus.h"
+#include "../zslstatus.h"
 #include "../util.h"
 
 static int

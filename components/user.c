@@ -4,7 +4,7 @@
 #include <sys/types.h>
 #include <unistd.h>
 
-#include "../slstatus.h"
+#include "../zslstatus.h"
 #include "../util.h"
 
 const char *

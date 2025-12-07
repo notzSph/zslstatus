@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <time.h>
 
-#include "../slstatus.h"
+#include "../zslstatus.h"
 #include "../util.h"
 
 #if defined(CLOCK_BOOTTIME)

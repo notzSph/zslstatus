@@ -2,7 +2,7 @@
 #include <limits.h>
 #include <stdio.h>
 
-#include "../slstatus.h"
+#include "../zslstatus.h"
 #include "../util.h"
 
 #if defined(__linux__)

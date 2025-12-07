@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 #include <stdio.h>
 
-#include "../slstatus.h"
+#include "../zslstatus.h"
 #include "../util.h"
 
 #if defined(__linux__)

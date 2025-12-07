@@ -5,7 +5,7 @@
 #include <sys/ioctl.h>
 #include <unistd.h>
 
-#include "../slstatus.h"
+#include "../zslstatus.h"
 #include "../util.h"
 
 #if defined(__OpenBSD__) | defined(__FreeBSD__)

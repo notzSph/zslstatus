@@ -4,7 +4,7 @@
 #include <string.h>
 #include <X11/Xlib.h>
 
-#include "../slstatus.h"
+#include "../zslstatus.h"
 #include "../util.h"
 
 /*

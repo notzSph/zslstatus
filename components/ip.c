@@ -11,7 +11,7 @@
 	#include <sys/socket.h>
 #endif
 
-#include "../slstatus.h"
+#include "../zslstatus.h"
 #include "../util.h"
 
 static const char *
