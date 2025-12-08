@@ -62,7 +62,7 @@ install: all
 	cp -f zslstatus "$(DESTDIR)$(PREFIX)/bin"
 	chmod 755 "$(DESTDIR)$(PREFIX)/bin/zslstatus"
 	mkdir -p "$(DESTDIR)$(MANPREFIX)/man1"
-	cp -f zslstatus.1 "$(DESTDIR)$(MANPREFIX)/man1"
+	sed "s/VERSION/$(VERSION)/g" < zslstatus.1 > "$(DESTDIR)$(MANPREFIX)/man1/zslstatus.1"
 	chmod 644 "$(DESTDIR)$(MANPREFIX)/man1/zslstatus.1"
 
 uninstall:
