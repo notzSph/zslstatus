@@ -47,6 +47,147 @@ responds to the following signals:
 .It USR1
 Triggers an instant redraw.
 .El
+.Sh COMPONENTS
+.Pp
+The status line is configured in
+.Pa config.h
+using an array of
+.Vt struct arg
+entries. Each entry consists of a function, a format string, and an argument.
+.Pp
+The following functions are available:
+.Bl -tag -width "battery_remaining"
+.It Li battery_perc
+Battery percentage.
+Argument: battery name (e.g. "BAT0").
+On OpenBSD/FreeBSD, use NULL.
+.It Li battery_remaining
+Battery remaining time (HH:MM).
+Argument: battery name (e.g. "BAT0").
+On OpenBSD/FreeBSD, use NULL.
+.It Li battery_state
+Battery charging state.
+Argument: battery name (e.g. "BAT0").
+On OpenBSD/FreeBSD, use NULL.
+.It Li cat
+Read an arbitrary file.
+Argument: file path.
+.It Li cpu_freq
+CPU frequency in MHz.
+Argument: NULL.
+.It Li cpu_perc
+CPU usage in percent.
+Argument: NULL.
+.It Li datetime
+Formatted date and time.
+Argument: format string (e.g. "%F %T").
+.It Li disk_free
+Free disk space in GB.
+Argument: mountpoint path (e.g. "/").
+.It Li disk_perc
+Disk usage in percent.
+Argument: mountpoint path (e.g. "/").
+.It Li disk_total
+Total disk space in GB.
+Argument: mountpoint path (e.g. "/").
+.It Li disk_used
+Used disk space in GB.
+Argument: mountpoint path (e.g. "/").
+.It Li entropy
+Available entropy.
+Argument: NULL.
+.It Li gid
+GID of the current user.
+Argument: NULL.
+.It Li hostname
+System hostname.
+Argument: NULL.
+.It Li ipv4
+IPv4 address.
+Argument: interface name (e.g. "eth0").
+.It Li ipv6
+IPv6 address.
+Argument: interface name (e.g. "eth0").
+.It Li kernel_release
+Kernel release as returned by
+.Dq uname -r .
+Argument: NULL.
+.It Li keyboard_indicators
+Caps/Num lock indicator string.
+Argument: format string (see
+.Pa keyboard_indicators.c
+for details).
+.It Li keymap
+Current keymap layout (and variant).
+Argument: NULL.
+.It Li load_avg
+System load average.
+Argument: NULL.
+.It Li netspeed_rx
+Receive network speed.
+Argument: interface name (e.g. "wlan0").
+.It Li netspeed_tx
+Transmit network speed.
+Argument: interface name (e.g. "wlan0").
+.It Li num_files
+Number of files in a directory.
+Argument: directory path (e.g. "/home/foo/Inbox/cur").
+.It Li ram_free
+Free memory in GB.
+Argument: NULL.
+.It Li ram_perc
+Memory usage in percent.
+Argument: NULL.
+.It Li ram_total
+Total memory size in GB.
+Argument: NULL.
+.It Li ram_used
+Used memory in GB.
+Argument: NULL.
+.It Li run_command
+Output of an arbitrary shell command.
+Argument: shell command string (e.g. "echo foo").
+.It Li swap_free
+Free swap space in GB.
+Argument: NULL.
+.It Li swap_perc
+Swap usage in percent.
+Argument: NULL.
+.It Li swap_total
+Total swap size in GB.
+Argument: NULL.
+.It Li swap_used
+Used swap in GB.
+Argument: NULL.
+.It Li temp
+Temperature in degrees Celsius.
+Argument: sensor path (e.g.
+.Pa /sys/class/thermal/... ) ,
+NULL on OpenBSD, or a thermal zone on FreeBSD (e.g. "tz0").
+.It Li uid
+UID of the current user.
+Argument: NULL.
+.It Li uptime
+System uptime.
+Argument: NULL.
+.It Li username
+Username of the current user.
+Argument: NULL.
+.It Li alsa_master_vol
+ALSA Master device volume.
+Argument: NULL.
+.It Li vol_perc
+OSS/ALSA volume in percent.
+Argument: mixer device (e.g. "/dev/mixer").
+On OpenBSD/FreeBSD, use NULL.
+.It Li wifi_essid
+WiFi ESSID.
+Argument: interface name (e.g. "wlan0").
+.It Li wifi_perc
+WiFi signal strength in percent.
+Argument: interface name (e.g. "wlan0").
+.El
+
 .Sh AUTHORS
 See the
 .Pa LICENSE
